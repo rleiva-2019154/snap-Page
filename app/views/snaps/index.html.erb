@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Snaps" %>
+
+<h1>Snaps - Comunicate</h1>
+
+<div id="snaps">
+  <% @snaps.each do |snap| %>
+    <%= render snap %>
+    <p>
+      <%= link_to "Show this snap", snap %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New snap", new_snap_path %>
